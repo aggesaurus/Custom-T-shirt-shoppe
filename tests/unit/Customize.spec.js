@@ -41,4 +41,19 @@ describe('TShirtCustomize.vue', () => {
     wrapper.vm.addText(expectedCustomData.Text)
     expect(wrapper.vm.fillingCustomData.Text).toEqual(expectedCustomData.Text) 
   })
+ 
+
+
+
+  
+
+//Pucha's arbete:
+  //User story Nr 25: Som kund vill jag kunna välja material på min t-shirt.
+  test('Choose material for my t-shirt', () => {
+    const wrapper = mount (TShirtCustomize)
+    wrapper.vm.chooseMaterial(expectedCustomData.Material)
+    expect(wrapper.vm.fillingCustomData.Material).toEqual(expectedCustomData.Material)
+  
+
+})
 })

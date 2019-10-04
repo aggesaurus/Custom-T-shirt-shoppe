@@ -24,8 +24,11 @@ export default {
       },
       addText(Text) {
         this.fillingCustomData.Text = Text;
+      },
+      chooseMaterial(Material) {
+        this.fillingCustomData.Material = Material;
       }
-    };
+    }
   }
 };
 </script>
