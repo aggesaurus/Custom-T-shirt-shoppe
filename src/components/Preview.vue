@@ -3,9 +3,9 @@ export default{
   data(){
     return{
       previewData:{
-        Size: '',
+       // Size: '',
         Color: '',
-        Material: '',
+        //Material: '',
         Model: '',
         Picture: '',
         Text: {
@@ -14,15 +14,18 @@ export default{
           FontColor: ''
         }
       },
-    // //   setSize(Size){
-    // //     this.fillingCustomData.Size = Size;
-    // //   },
-    // //   setColor(Color){
-    // //     this.fillingCustomData.Color = Color;
-    // //   },
-    // //   addText(Text){
-    // //     this.fillingCustomData.Text = Text;
-    //   }
+      setSize(Size){
+        this.fillingCustomData.Size = Size;
+      },
+      setColor(Color){
+        this.fillingCustomData.Color = Color;
+      },
+      addText(Text){
+        this.fillingCustomData.Text = Text;
+        },
+      setTshirtPreview(previewData){
+        this.previewData = Picture;
+      }
     }
   }
 }
