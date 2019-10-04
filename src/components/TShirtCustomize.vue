@@ -7,11 +7,14 @@ export default {
         Color: "",
         Material: "",
         Model: "",
-        Picture: "",
+        Picture:  { 
+          picUpload: "mycar.jpg",    //Pucha added this for US17
+          picSize: "150%"            //Pucha added this for US17
+        },
         FrontPreview: "",
         BackPreview: "",
         Text: {
-          Fonttheme: "",    //Pucha added this
+          Fonttheme: "",    //Pucha added this for US16
           Fontsize: "",
           Fontstyle: "",
           FontColor: ""
@@ -40,6 +43,10 @@ export default {
       },
       setFontTheme(Fonttheme) {
         this.fillingCustomData.Fonttheme = Fonttheme
+      },
+      setPicSize(picSize) {
+        this.fillingCustomData.picSize = picSize
+
       }
     };
   }

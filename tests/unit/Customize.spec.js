@@ -6,9 +6,12 @@ let expectedCustomData = {
   Color: "Blue",
   Material: "Cotton",
   Model: "Long arms",
-  Picture: "mycar.jpg",
+  Picture:  { 
+    picUpload: "mycar.jpg",    //Pucha added this for US17
+    picSize: "150%"            //Pucha added this for US17
+  },
   Text: {
-    Fonttheme: "Calibri",   //Pucha added this
+    Fonttheme: "Calibri",   //Pucha added this for US16
     Fontsize: "18",
     Fontstyle: "Bold",      //Pucha changed it to Bold
     FontColor: "Yellow"
@@ -20,22 +23,26 @@ describe('TShirtCustomize.vue', () => {
     const wrapper = mount(TShirtCustomize)
     expect(wrapper.isVueInstance()).toBeTruthy()
   })
+
   test('setSize', () => {
     const wrapper = mount(TShirtCustomize)
     wrapper.vm.setSize(expectedCustomData.Size)
     expect(wrapper.vm.fillingCustomData.Size).toEqual(expectedCustomData.Size)
   })
+
   // userstory 3: Som kund vill jag kunna välja färg på min t-shirt.
   test('setColor', () => {
     const wrapper = mount(TShirtCustomize)
     wrapper.vm.setColor(expectedCustomData.Color)
     expect(wrapper.vm.fillingCustomData.Color).toEqual(expectedCustomData.Color)
   })
+
   // userstory 4: Som kund vill jag kunna skapa min egen t-shirt.
   test('Customize my own shirt', () => {
     const wrapper = mount(TShirtCustomize)
     expect(wrapper.vm.fillingCustomData).toBeDefined()
   })
+
   // userstory 5: Som kund vill jag kunna ange text för min t-shirt.
   test('Add text', () => {
     const wrapper = mount(TShirtCustomize)
@@ -86,5 +93,14 @@ describe('TShirtCustomize.vue', () => {
     const wrapper = mount(TShirtCustomize)
     wrapper.vm.setFontTheme(expectedCustomData.Fonttheme)
     expect(wrapper.vm.fillingCustomData.Fonttheme).toEqual(expectedCustomData.Fonttheme)
+  })
+
+
+  //User story Nr 17: Som kund vill jag kunna ändra storlek på min bild.
+  test('Change size of the picture on my t-shirt', () => {
+    const wrapper = mount(TShirtCustomize)
+    wrapper.vm.setPicSize(expectedCustomData.picSize)
+    expect(wrapper.vm.fillingCustomData.picSize).toEqual(expectedCustomData.picSize)
+
   })
 })
