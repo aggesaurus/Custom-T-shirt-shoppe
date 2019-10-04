@@ -1,29 +1,31 @@
 <script>
-export default{
-  data(){
-    return{
-      fillingCustomData:{
-        Size: '',
-        Color: '',
-        Material: '',
-        Model: '',
-        Picture: '',
+export default {
+  data() {
+    return {
+      fillingCustomData: {
+        Size: "",
+        Color: "",
+        Material: "",
+        Model: "",
+        Picture: "",
+        FrontPreview: "",
+        BackPreview: "",
         Text: {
-          Fontstyle: '',
-          Fontsize: '',
-          FontColor: ''
+          Fontstyle: "",
+          Fontsize: "",
+          FontColor: ""
         }
       },
-      setSize(Size){
+      setSize(Size) {
         this.fillingCustomData.Size = Size;
       },
-      setColor(Color){
+      setColor(Color) {
         this.fillingCustomData.Color = Color;
       },
-      addText(Text){
+      addText(Text) {
         this.fillingCustomData.Text = Text;
       }
-    }
+    };
   }
-}
+};
 </script>
