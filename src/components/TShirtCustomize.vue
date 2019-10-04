@@ -11,8 +11,9 @@ export default {
         FrontPreview: "",
         BackPreview: "",
         Text: {
-          Fontstyle: "",
+          Fonttheme: "",    //Pucha added this
           Fontsize: "",
+          Fontstyle: "",
           FontColor: ""
         }
       },
@@ -25,10 +26,22 @@ export default {
       addText(Text) {
         this.fillingCustomData.Text = Text;
       },
+      chooseModel(Model) {
+        this.fillingCustomData.Model = Model;
+      },
       chooseMaterial(Material) {
         this.fillingCustomData.Material = Material;
+      },
+      setFontColor(FontColor) {
+        this.fillingCustomData.FontColor = FontColor;
+      },
+      setFontStyle(Fontstyle) {
+        this.fillingCustomData.Fontstyle = Fontstyle
+      },
+      setFontTheme(Fonttheme) {
+        this.fillingCustomData.Fonttheme = Fonttheme
       }
-    }
+    };
   }
 };
 </script>
