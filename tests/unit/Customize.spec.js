@@ -14,11 +14,11 @@ let expectedCustomData = {
   }
 }
 // userstory 2: Som kund vill jag kunna välja storlek på min t-shirt. 
-describe('TShirtCustomize.vue', () => {
+  describe('TShirtCustomize.vue', () => {
   test('is a Vue instance', () => {
     const wrapper = mount(TShirtCustomize)
     expect(wrapper.isVueInstance()).toBeTruthy()
-  })
+  })  
   test('setSize', () => {
     const wrapper = mount(TShirtCustomize)
     wrapper.vm.setSize(expectedCustomData.Size)
