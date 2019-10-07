@@ -8,10 +8,14 @@ export default {
           Color: "",
           Material: "",
           Model: "",
-          Picture: "",
+          Picture: {
+            picUpload: "", //Pucha added this for US17
+            picSize: "" //Pucha added this for US17
+          },
           Text: {
-            Fontstyle: "",
+            Fonttheme: "", //Pucha added this for US16
             Fontsize: "",
+            Fontstyle: "",
             FontColor: ""
           }
         },
@@ -20,11 +24,14 @@ export default {
           Color: "",
           Material: "",
           Model: "",
-          Picture: "",
+          Picture: {
+            picUpload: "", //Pucha added this for US17
+            picSize: "" //Pucha added this for US17
+          },
           Text: {
-            Fontstyle: "",
+            Fonttheme: "", //Pucha added this for US16
             Fontsize: "",
-            FontColor: ""
+            Fontstyle: ""
           }
         }
       },
@@ -36,12 +43,30 @@ export default {
       },
       addText(Text) {
         this.fillingCustomData.Text = Text;
-        },
+      },
       uploadPicture(Picture) {
         this.fillingCustomData.Picture = Picture;
-        },
+      },
       changetextFontsize(Fontsize) {
         this.fillingCustomData.Fontsize = Fontsize;
+      },
+      chooseModel(Model) {
+        this.fillingCustomData.Model = Model;
+      },
+      chooseMaterial(Material) {
+        this.fillingCustomData.Material = Material;
+      },
+      setFontColor(FontColor) {
+        this.fillingCustomData.FontColor = FontColor;
+      },
+      setFontStyle(Fontstyle) {
+        this.fillingCustomData.Fontstyle = Fontstyle;
+      },
+      setFontTheme(Fonttheme) {
+        this.fillingCustomData.Fonttheme = Fonttheme;
+      },
+      setPicSize(picSize) {
+        this.fillingCustomData.picSize = picSize;
       }
     };
   }
