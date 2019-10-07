@@ -17,6 +17,15 @@ export default{
       },
       setTShirt(tShirt){
         this.orderData.tShirt = tShirt;
+        },
+      orderAmount(Amount){
+        this.orderData.Amount = Amount;
+         },
+      orderHistory(orderHistory){
+        this.orderData.orderHistory = orderHistory;
+        },
+      tShirtPreview(tShirtPreview){
+        this.orderData.tShirtPreview = tShirtPreview;
       }
     }
   }

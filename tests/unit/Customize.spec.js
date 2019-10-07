@@ -14,11 +14,11 @@ let expectedCustomData = {
   }
 }
 // userstory 2: Som kund vill jag kunna välja storlek på min t-shirt. 
-describe('TShirtCustomize.vue', () => {
+  describe('TShirtCustomize.vue', () => {
   test('is a Vue instance', () => {
     const wrapper = mount(TShirtCustomize)
     expect(wrapper.isVueInstance()).toBeTruthy()
-  })
+  })  
   test('setSize', () => {
     const wrapper = mount(TShirtCustomize)
     wrapper.vm.setSize(expectedCustomData.Size)
@@ -39,6 +39,18 @@ describe('TShirtCustomize.vue', () => {
   test('Add text', () => {
     const wrapper = mount(TShirtCustomize)
     wrapper.vm.addText(expectedCustomData.Text)
-    expect(wrapper.vm.fillingCustomData.Text).toEqual(expectedCustomData.Text) 
+    expect(wrapper.vm.fillingCustomData.Text).toEqual(expectedCustomData.Text)
+  })
+  // userstory 11: Som kund vill jag kunna ladda upp en egen bild på min t-shirt
+  test('upload a picture for my t-shirt', () => {
+    const wrapper = mount(TShirtCustomize)
+    wrapper.vm.uploadPicture(expectedCustomData.Picture)
+    expect(wrapper.vm.fillingCustomData.Picture).toEqual(expectedCustomData.Picture)
+  })  
+  // userstory 13: Som kund vill jag kunna ändra storlek på min text
+  test('Change font size of the text on my t-shirt', () => {
+    const wrapper = mount(TShirtCustomize)
+    wrapper.vm.changetextFontsize(expectedCustomData.Fontsize)
+    expect(wrapper.vm.fillingCustomData.Fontsize).toEqual(expectedCustomData.Fontsize)  
   })
 })

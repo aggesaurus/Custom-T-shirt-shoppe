@@ -24,6 +24,12 @@ export default {
       },
       addText(Text) {
         this.fillingCustomData.Text = Text;
+        },
+      uploadPicture(Picture) {
+        this.fillingCustomData.Picture = Picture;
+        },
+      changetextFontsize(Fontsize) {
+        this.fillingCustomData.Fontsize = Fontsize;
       }
     };
   }
