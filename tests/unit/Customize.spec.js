@@ -26,7 +26,7 @@ let expectedCustomData = {
       FontColor: "Yellow"
     }
   },
-  BackCusztomize: {
+  BackCustomize: {
     Size: "Medium",
     Color: "Blue",
     Material: "Cotton",
@@ -70,11 +70,11 @@ describe('TShirtCustomize.vue', () => {
   //userstory 18: Som kund vill jag kunna skapa fram/baksida på min t-shirt.
   test('Customize front', () => {
     const wrapper = mount(TShirtCustomize)
-    expect(wrapper.vm.fillingCustomData).toBeDefined()
+    expect(wrapper.vm.fillingCustomData.FrontPreview).toBeDefined()
   })
   test('Customize back', () => {
     const wrapper = mount(TShirtCustomize)
-    expect(wrapper.vm.fillingCustomData).toBeDefined()
+    expect(wrapper.vm.fillingCustomData.BackPreview).toBeDefined()
   })
   //userstory 19: Som kund vill jag kunna ha samma möjligheter att arbeta med text, färg och bild på baksidan som jag har på framsidan.
   test('Back customize for text, color & picture', () => {
