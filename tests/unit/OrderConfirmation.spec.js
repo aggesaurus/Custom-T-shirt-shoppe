@@ -24,18 +24,18 @@ let expectedOrderConfirmData = {
 }
 
 //us. 10 som kund vill jag se en orderbekräftelse
-describe('Payment.vue', () => {
+describe('OrderConfirmation.vue', () => {
     test('is a Vue instance', () => {
       const wrapper = mount(OrderConfirmation)
       expect(wrapper.isVueInstance()).toBeTruthy()
     })
     test('Define my confirmation data', () => {
         const wrapper = mount(OrderConfirmation)
-        expect(wrapper.vm.OrderConfirmation).toBeDefined()
+        expect(wrapper.vm.fillingOrderData).toBeDefined()
     })
 
     test('show my order confirmation ', () => {
         const wrapper = mount(OrderConfirmation)
-        expect(wrapper.vm.fillingOrderData.Size).toEqual(expectedOrderConfirmData) 
+        expect(wrapper.vm.fillingOrderData).toEqual(expectedOrderConfirmData) 
       })
     })
