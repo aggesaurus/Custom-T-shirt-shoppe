@@ -1,33 +1,36 @@
 <script>
-export default{
-  data(){
-    return{
-      orderData:{
-        firstName:'',
-        lastName:"",
-        Address:"",
-        orderNr:"",
-        Amount:'',
-        Price:"",
-        orderHistory:'',
-        tShirtPreview:'',
+export default {
+  data() {
+    return {
+      orderData: {
+        firstName: "",
+        lastName: "",
+        Address: "",
+        orderNr: "",
+        Amount: "",
+        Price: "",
+        orderHistory: "",
+        tShirtPreview: ""
       },
-      setFirstName(name){
+      setFirstName(name) {
         this.orderData.firstName = name;
       },
-      setTShirt(tShirt){
+      setTShirt(tShirt) {
         this.orderData.tShirt = tShirt;
-        },
-      orderAmount(Amount){
+      },
+      orderAmount(Amount) {
         this.orderData.Amount = Amount;
-         },
-      orderHistory(orderHistory){
+      },
+      orderHistory(orderHistory) {
         this.orderData.orderHistory = orderHistory;
-        },
-      tShirtPreview(tShirtPreview){
+      },
+      tShirtPreview(tShirtPreview) {
         this.orderData.tShirtPreview = tShirtPreview;
+      },
+      orderPrice(Price){
+        this.orderData.Price = Price;
       }
-    }
+    };
   }
-}
+};
 </script>

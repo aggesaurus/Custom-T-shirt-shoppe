@@ -3,17 +3,29 @@ export default {
   data() {
     return {
       fillingCustomData: {
-        Size: "",
-        Color: "",
-        Material: "",
-        Model: "",
-        Picture: "",
-        FrontPreview: "",
-        BackPreview: "",
-        Text: {
-          Fontstyle: "",
-          Fontsize: "",
-          FontColor: ""
+        FrontPreview: {
+          Size: "",
+          Color: "",
+          Material: "",
+          Model: "",
+          Picture: "",
+          Text: {
+            Fontstyle: "",
+            Fontsize: "",
+            FontColor: ""
+          }
+        },
+        BackPreview: {
+          Size: "",
+          Color: "",
+          Material: "",
+          Model: "",
+          Picture: "",
+          Text: {
+            Fontstyle: "",
+            Fontsize: "",
+            FontColor: ""
+          }
         }
       },
       setSize(Size) {
