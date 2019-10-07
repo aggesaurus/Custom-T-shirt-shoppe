@@ -1,18 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import TShirtCustomize from '@/components/TShirtCustomize.vue'
-// let customize = expectedCustomData 
-// let expectedCustomData = {
-//   Size: "Medium",
-//   Color: "Blue",
-//   Material: "Cotton",
-//   Model: "Long arms",
-//   Picture: "mycar.jpg",
-//   Text: {
-//     Fontstyle: "Calibri",
-//     Fontsize: "18",
-//     FontColor: "Yellow"
-//   }
-// }
+
 let expectedCustomData = {
   FrontCustomize: {
     Size: "Medium",
