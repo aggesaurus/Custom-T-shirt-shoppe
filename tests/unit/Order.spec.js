@@ -26,8 +26,8 @@ describe('Order.vue', () => {
   // US7: Som kund vill jag kunna se vad min t-shirt kommer att kosta.
   test('Order Price', () => {
     const wrapper = mount(Order)
-    wrapper.vm.orderPrice(expectedOrderData.Price)
-    expect(wrapper.vm.orderData.Price).toEqual(expectedOrderData.Price)
+    wrapper.vm.orderPrice(expectedOrderData.totalPrice)
+    expect(wrapper.vm.orderData.totalPrice).toEqual(expectedOrderData.totalPrice)
   })
   // US12: Som kund vill jag kunna välja antal t-shirts att beställa.
   test('Order the amount of t-shirts', () => {

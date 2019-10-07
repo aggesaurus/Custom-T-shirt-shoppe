@@ -29,8 +29,8 @@ export default {
       tShirtPreview(tShirtPreview) {
         this.orderData.tShirtPreview = tShirtPreview;
       },
-      orderPrice(Price) {
-        this.orderData.Price = Price;
+      orderPrice(totalPrice) {
+        this.orderData.totalPrice = totalPrice;
       },
       setDisCode(discountCode) {
         this.orderData.discountCode = discountCode
