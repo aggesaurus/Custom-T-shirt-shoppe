@@ -3,21 +3,36 @@ export default {
   data() {
     return {
       fillingCustomData: {
-        Size: "",
-        Color: "",
-        Material: "",
-        Model: "",
-        Picture:  { 
-          picUpload: "mycar.jpg",    //Pucha added this for US17
-          picSize: "150%"            //Pucha added this for US17
+        FrontPreview: {
+          Size: "",
+          Color: "",
+          Material: "",
+          Model: "",
+          Picture: {
+            picUpload: "", //Pucha added this for US17
+            picSize: "" //Pucha added this for US17
+          },
+          Text: {
+            Fonttheme: "", //Pucha added this for US16
+            Fontsize: "",
+            Fontstyle: "",
+            FontColor: ""
+          }
         },
-        FrontPreview: "",
-        BackPreview: "",
-        Text: {
-          Fonttheme: "",    //Pucha added this for US16
-          Fontsize: "",
-          Fontstyle: "",
-          FontColor: ""
+        BackPreview: {
+          Size: "",
+          Color: "",
+          Material: "",
+          Model: "",
+          Picture: {
+            picUpload: "", //Pucha added this for US17
+            picSize: "" //Pucha added this for US17
+          },
+          Text: {
+            Fonttheme: "", //Pucha added this for US16
+            Fontsize: "",
+            Fontstyle: ""
+          }
         }
       },
       setSize(Size) {
@@ -29,6 +44,12 @@ export default {
       addText(Text) {
         this.fillingCustomData.Text = Text;
       },
+      uploadPicture(Picture) {
+        this.fillingCustomData.Picture = Picture;
+      },
+      changetextFontsize(Fontsize) {
+        this.fillingCustomData.Fontsize = Fontsize;
+      },
       chooseModel(Model) {
         this.fillingCustomData.Model = Model;
       },
@@ -39,14 +60,13 @@ export default {
         this.fillingCustomData.FontColor = FontColor;
       },
       setFontStyle(Fontstyle) {
-        this.fillingCustomData.Fontstyle = Fontstyle
+        this.fillingCustomData.Fontstyle = Fontstyle;
       },
       setFontTheme(Fonttheme) {
-        this.fillingCustomData.Fonttheme = Fonttheme
+        this.fillingCustomData.Fonttheme = Fonttheme;
       },
       setPicSize(picSize) {
-        this.fillingCustomData.picSize = picSize
-
+        this.fillingCustomData.picSize = picSize;
       }
     };
   }

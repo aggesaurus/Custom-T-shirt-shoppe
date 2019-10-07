@@ -2,16 +2,17 @@ import { mount } from '@vue/test-utils'
 import Payment from '@/components/Payment.vue'
 
 let expectedPaymentData = {
-    PresentCard: "",
-    Invoice: "",
-    DirectPaymentViaBank: "",
-    Card: "",
+    PresentCard: "Emporia Shopping Mall",
+    Invoice: "Klarna",
+    DirectPaymentViaBank: "Nordea Bank",
+    Card: "Credit Card ICA Banken",
     Swisha: "",
     Paypal: "",
-    TotalPrice: ""
+    TotalPrice: "300"
 }
 
-//User story Nr 9: Som kund vill jag kunna betala för min t-shirt.
+
+//User story Nr 23: Som kund vill jag kunna välja betalningsalternativ.
 describe('Payment.vue', () => {
     test('is a Vue instance', () => {
         const wrapper = mount(Payment)
@@ -40,12 +41,3 @@ describe('Payment.vue', () => {
 
 
 })
-
-
-
-
-
-
-
-
-

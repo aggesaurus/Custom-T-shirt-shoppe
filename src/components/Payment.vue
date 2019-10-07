@@ -11,12 +11,11 @@ export default {
         Paypal: "",
         TotalPrice: ""
       },
-
       setPayInvoice(Invoice) {
-        this.fillingPaymentData.Invoice = Invoice
+        this.fillingPaymentData.Invoice = Invoice;
       },
       setPayCard(Card) {
-        this.fillingPaymentData.Card = Card
+        this.fillingPaymentData.Card = Card;
       }
     };
   }
