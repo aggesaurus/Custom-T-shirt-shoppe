@@ -6,7 +6,9 @@ let expectedOrderData = {
   Address: "Winterfell",
   orderNr: "12345",
   Amount: '2',
-  Price: "200",
+  originalPrice: "200",
+  discountCode: "OKT19",
+  totalPrice: "180",
   orderHistory: '',
   tShirtPreview: '',
 }
@@ -33,6 +35,14 @@ describe('Order.vue', () => {
     wrapper.vm.orderAmount(expectedOrderData.Amount)
     expect(wrapper.vm.orderData.Amount).toEqual(expectedOrderData.Amount)
   })
+
+  //User story Nr 24: Som kund vill jag kunna använda en rabattkod.
+  test('Order the amount of t-shirts', () => {
+    const wrapper = mount(Order)
+    wrapper.vm.setDisCode(expectedOrderData.discountCode)
+    expect(wrapper.vm.orderData.discountCode).toEqual(expectedOrderData.discountCode)
+  })
+
   // US28:Som kund vill jag kunna se min orderhistorik. 
   test('See of my order history', () => {
     const wrapper = mount(Order)

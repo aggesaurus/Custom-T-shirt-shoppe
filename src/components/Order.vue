@@ -8,7 +8,9 @@ export default {
         Address: "",
         orderNr: "",
         Amount: "",
-        Price: "",
+        originalPrice: "",
+        discountCode: "",
+        totalPrice: "",
         orderHistory: "",
         tShirtPreview: ""
       },
@@ -27,8 +29,11 @@ export default {
       tShirtPreview(tShirtPreview) {
         this.orderData.tShirtPreview = tShirtPreview;
       },
-      orderPrice(Price){
+      orderPrice(Price) {
         this.orderData.Price = Price;
+      },
+      setDisCode(discountCode) {
+        this.orderData.discountCode = discountCode
       }
     };
   }
