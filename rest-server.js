@@ -24,6 +24,10 @@ db.query = util.promisify(db.query);
 // Anslut till databasen
 db.connect();
 
+// acceptera CORS
+let cors = require('cors');
+app.use(cors());
+
 ///////////////////////////
 // REST API
 
