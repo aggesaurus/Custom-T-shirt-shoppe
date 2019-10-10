@@ -1,32 +1,48 @@
 import { mount } from '@vue/test-utils'
 import Order from '@/components/Order.vue'
 let expectedOrderData = {
-        firstName:'',
-        lastName:"",
-        Address:"",
-        orderNr:"",
-        Amount:'',
-        Price:"",
-        orderHistory:'',
-        tShirtPreview:'',
+  firstName: 'Jon',
+  lastName: "Bastardo",
+  Address: "Winterfell",
+  orderNr: "12345",
+  Amount: '2',
+  originalPrice: "200",
+  discountCode: "OKT19",
+  totalPrice: "180",
+  orderHistory: '',
+  tShirtPreview: '',
 }
 
 // US8: Som kund vill jag kunna beställa min t-shirt.
 describe('Order.vue', () => {
-    test('is a Vue instance', () => {
-      const wrapper = mount(Order)
-      expect(wrapper.isVueInstance()).toBeTruthy()
-    })
-    test('Order my tshirt', () => {
-        const wrapper = mount(Order)
-        expect(wrapper.vm.orderData).toBeDefined()
-      })
-// US12: Som kund vill jag kunna välja antal t-shirts att beställa.
-      test('Order the amount of t-shirts', () => {
-        const wrapper = mount(Order)
-        wrapper.vm.orderAmount(expectedOrderData.Amount)
-        expect(wrapper.vm.orderData.Amount).toEqual(expectedOrderData.Amount) 
+  test('is a Vue instance', () => {
+    const wrapper = mount(Order)
+    expect(wrapper.isVueInstance()).toBeTruthy()
   })
+  test('Order my tshirt', () => {
+    const wrapper = mount(Order)
+    expect(wrapper.vm.orderData).toBeDefined()
+  })
+  // US7: Som kund vill jag kunna se vad min t-shirt kommer att kosta.
+  test('Order Price', () => {
+    const wrapper = mount(Order)
+    wrapper.vm.orderPrice(expectedOrderData.totalPrice)
+    expect(wrapper.vm.orderData.totalPrice).toEqual(expectedOrderData.totalPrice)
+  })
+  // US12: Som kund vill jag kunna välja antal t-shirts att beställa.
+  test('Order the amount of t-shirts', () => {
+    const wrapper = mount(Order)
+    wrapper.vm.orderAmount(expectedOrderData.Amount)
+    expect(wrapper.vm.orderData.Amount).toEqual(expectedOrderData.Amount)
+  })
+
+  //User story Nr 24: Som kund vill jag kunna använda en rabattkod.
+  test('Order the amount of t-shirts', () => {
+    const wrapper = mount(Order)
+    wrapper.vm.setDisCode(expectedOrderData.discountCode)
+    expect(wrapper.vm.orderData.discountCode).toEqual(expectedOrderData.discountCode)
+  })
+
   // US28:Som kund vill jag kunna se min orderhistorik. 
   test('See of my order history', () => {
     const wrapper = mount(Order)
@@ -38,6 +54,6 @@ describe('Order.vue', () => {
     const wrapper = mount(Order)
     wrapper.vm.tShirtPreview(expectedOrderData.tShirtPreview)
     expect(wrapper.vm.orderData.tShirtPreview).toEqual(expectedOrderData.tShirtPreview)
-        
-})
+
+  })
 })
