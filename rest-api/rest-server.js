@@ -31,6 +31,8 @@ app.use(cors());
 ///////////////////////////
 // REST API
 
+// Lägg egna routes här om ni vill
+
 // GET läser, ex: http://localhost:3000/magazines,  http://localhost:3000/magazines/2
 app.get('/rest/:table/:id?', async (req, res) => {
   let result;
