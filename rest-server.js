@@ -39,6 +39,7 @@ app.get('/rest/:table/:id?', async (req, res) => {
     res.json(result[0]); // returnera resultatet som ett objekt
   }else{
     result = await db.query("SELECT * FROM ??", [req.params.table]);
+    res.json(result); // returnera resultatet som en array med objekt
   }
 });
 
