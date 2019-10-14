@@ -1,15 +1,18 @@
 <template>
   <div class="t-shirt-config row">
-    <h4 class="col-12 headline">Design your tee!</h4>
+    <h4 class="col-12 headline">Design your TShirt!</h4>
     <form class="needs-validation" novalidate>
 
       <div class="col-12 form-group">
         <label for="size">Size</label>
         <select class="custom-select d-block w-100" v-model="fillingCustomData.size" id="size" required>
           <option value="">Choose...</option>
+          <option value="XS">XS</option>
           <option value="S">S</option>
           <option value="M">M</option>
           <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
         </select>
       </div>
 
@@ -25,6 +28,16 @@
       </div>
 
       <div class="col-12 form-group">
+        <label for="size">Model</label>
+        <select class="custom-select d-block w-100" v-model="fillingCustomData.Model" id="model" required>
+          <option value="">Choose...</option>
+          <option value="long sleeves">long sleeves</option>
+          <option value="short sleeves">short sleeves</option>
+          <option value="tight">tight</option>
+          </select>
+      </div>
+
+      <div class="col-12 form-group">
         <label for="image">Image</label>
         <FileUpload class="form-control-file" id="image" v-model="fillingCustomData.picture"></FileUpload>
       </div>
@@ -36,6 +49,33 @@
     </form>
   </div>
 </template>
+<script>
+import FileUpload from '@/components/FileUpload.vue'
+export default {
+  components:{
+    FileUpload
+  },
+  data(){
+    return {
+      tShirt: {
+        size: '',
+        image: ''
+      }
+    }
+  }
+}
+//</script>
+<style>
+  form{
+    background-color:white;
+    padding:15px;
+    border-radius:5px;
+    margin-bottom:20px;
+    margin-left:20px;
+  }
+</style>
+</script>
+
 <script>
 export default {
   data() {
