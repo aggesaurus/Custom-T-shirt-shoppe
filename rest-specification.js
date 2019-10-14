@@ -39,7 +39,7 @@ let api = [
       description: 'As a user I want to be able to get a confirmation of my order', //US10
       request:{
         method: 'get',
-        url: 'localhost:3000/rest/order_confirmation',
+        url: 'localhost:3000/rest/order_confirmation'
         //params: ['id']
       },
       response:{
@@ -61,7 +61,7 @@ let api = [
     description: 'As a user I want to be able to upload a picture for my t-shirt', //US11
       request:{
         method: 'get',
-        url: 'localhost:3000/rest/product/5',
+        url: 'localhost:3000/rest/product/5'
         //params: ['id']
       },
       response:{
@@ -82,7 +82,7 @@ let api = [
     description: 'As a user I want to be able to use a discount code', //US24
       request:{
         method: 'get',
-        url: 'localhost:3000/rest/order/4',
+        url: 'localhost:3000/rest/order/4'
         //params: ['id']
       },
       response:{
@@ -101,7 +101,7 @@ let api = [
     description: 'As a user I want to be able to choose the amount of t-shirts', //US12
       request:{
         method: 'get',
-        url: 'localhost:3000/rest/order/3',
+        url: 'localhost:3000/rest/order/3'
         //params: ['id']
       },
       response:{
@@ -120,7 +120,7 @@ let api = [
     description: 'As a user I want to be able to change font size of the text on my t-shirt', //US13
     request:{
       method: 'get',
-      url: 'localhost:3000/rest/customize/3',
+      url: 'localhost:3000/rest/customize/3'
       //params: ['id']
     },
     response:{
@@ -137,7 +137,7 @@ let api = [
     description: 'As a user I want to be able to change the text color', //US14
     request:{
       method: 'get',
-      url: 'localhost:3000/rest/customize/2',
+      url: 'localhost:3000/rest/customize/2'
       //params: ['id']
     },
     response:{
@@ -154,7 +154,7 @@ let api = [
     description: 'As a user I want to be able to choose any model from the t-shirt selections', //US20
       request:{
         method: 'get',
-        url: 'localhost:3000/rest/product/4',
+        url: 'localhost:3000/rest/product/4'
         //params: ['id']
       },
       response:{
@@ -175,7 +175,7 @@ let api = [
     description: 'As a user I want to be able to do invoice payment', //US21
       request:{
         method: 'get',
-        url: 'localhost:3000/rest/payment_method/2',
+        url: 'localhost:3000/rest/payment_method/2'
         //params: ['id']
       },
       response:{
@@ -196,7 +196,7 @@ let api = [
     description: ' As a user I want to be able to pay with card', //US22
       request:{
         method: 'get',
-        url: 'localhost:3000/rest/payment_method/1',
+        url: 'localhost:3000/rest/payment_method/1'
         //params: ['id']
       },
       response:{
@@ -217,7 +217,7 @@ let api = [
     description: 'As a user I want to be able to choose any payment options', //US23
       request:{
         method: 'get',
-        url: 'localhost:3000/rest/payment_method',
+        url: 'localhost:3000/rest/payment_method'
         //params: ['id']
       },
       response:{
@@ -238,7 +238,7 @@ let api = [
     description: 'As a user I want to be able to choose a material of my t-shirt', //US25
       request:{
         method: 'get',
-        url: 'localhost:3000/rest/product/3',
+        url: 'localhost:3000/rest/product/3'
         //params: ['id']
       },
       response:{
@@ -254,4 +254,5 @@ let api = [
           }
       ]
     }
+  }
 ]
