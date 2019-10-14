@@ -1,15 +1,15 @@
 <template>
-  <div id="app" class="container-fluid">
-    <router-view/>
+  <div id="app">
+    <img alt="Vue logo" src="./assets/logo.png">
   </div>
 </template>
 
-<style>
-@import url(https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css);
+<script>
 
-body{
-  min-height:100vh;
-  background-color:black;
+export default {
+  name: 'app',
+  components: {
+   }
 }
 
 .preview-image{
