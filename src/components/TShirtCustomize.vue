@@ -39,7 +39,7 @@
 
       <div class="col-12 form-group">
         <label for="image">Image</label>
-        <FileUpload class="form-control-file" id="image" v-model="fillingCustomData.picture"></FileUpload>
+        <!-- <FileUpload class="form-control-file" id="image" v-model="fillingCustomData.picture"></FileUpload> -->
       </div>
 
       <div class="col-12 form-group">
@@ -51,21 +51,21 @@
 </template>
 
 <script>
-import FileUpload from '@/components/FileUpload.vue'
-export default {
-  components:{
-    FileUpload
-  },
-  data(){
-    return {
-      tShirt: {
-        size: '',
-        image: ''
-      }
-    }
-  }
-}
-//</script>
+// import FileUpload from '@/components/FileUpload.vue'
+// export default {
+//   components:{
+//     FileUpload
+//   },
+//   data(){
+//     return {
+//       tShirt: {
+//         size: '',
+//         image: ''
+//       }
+//     }
+//   }
+// }
+// //</script>
 <style>
   form{
     background-color:white;
