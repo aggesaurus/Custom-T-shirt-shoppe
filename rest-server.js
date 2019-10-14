@@ -31,17 +31,16 @@ app.use(cors());
 ///////////////////////////
 // REST API
 
-// Lägg egna routes här om ni vill
-
 // GET läser, ex: http://localhost:3000/magazines,  http://localhost:3000/magazines/2
 app.get('/rest/:table/:id?', async (req, res) => {
   let result;
   if(req.params.id){
     result = await db.query("SELECT * FROM ?? WHERE id = ?", [req.params.table, req.params.id]);
+    res.json(result[0]); // returnera resultatet som ett objekt
   }else{
     result = await db.query("SELECT * FROM ??", [req.params.table]);
-  }
-  res.json(result);
+    res.json(result); // returnera resultatet som en array med objekt
+  }  
 });
 
 // POST skapar, ex: http://localhost:3000/magazines
@@ -66,16 +65,6 @@ app.delete('/rest/:table/:id', async (req, res) => {
 app.all('/rest/*', async (req, res) => {
   console.log('not found', req.path, req.method);
   res.status(404).end();
-});
-
-// serve frontend files (all existing files in the client folder will respond)
-app.use(express.static( './client/'));
-// also catch all remaining requests
-// and send them to our index.html file
-// because that is how we get virtual routes in the front-end (and front-end 404's)
-// use a little regex for that (not match rest)
-app.get('*', async(req, res)=>{
-  res.sendFile(path.normalize(__dirname + '/client/index.html'));
 });
 
 // servern startas
