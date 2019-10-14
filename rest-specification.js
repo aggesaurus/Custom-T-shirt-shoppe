@@ -254,34 +254,4 @@ let api = [
           }
       ]
     }
-  },
-  {      
-    description: 'As a user I',
-      request:{
-        method: 'put',
-        url: '/rest/animals/:id',
-        params: ['id'],
-        body:{
-          name: String,
-          type: String,
-          age: Number
-        }
-      },
-      response:{
-        statusCode: Number,
-        error: Object
-      }
-    },
-    {
-      description: 'Delete one animal using its id',
-      request:{
-        method: 'delete',
-        url: '/rest/animals/:id',
-        params: ['id']
-      },
-      response:{
-        statusCode: Number,
-        error: Object
-      }
-    }
-  ]
+  }

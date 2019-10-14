@@ -40,7 +40,7 @@ app.get('/rest/:table/:id?', async (req, res) => {
   }else{
     result = await db.query("SELECT * FROM ??", [req.params.table]);
     res.json(result); // returnera resultatet som en array med objekt
-  }
+  }  
 });
 
 // POST skapar, ex: http://localhost:3000/magazines

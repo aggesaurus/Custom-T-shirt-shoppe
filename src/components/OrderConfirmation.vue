@@ -9,7 +9,7 @@ export default {
           
       firstName:" John ",
       lastName:" Smith ",
-      delivaryAdd: " 43231, Mount.Claire, St.Jose",
+      deliveryAdd: " 43231, Mount.Claire, St.Jose",
       OrderNr: "123456",
       OrderDatum: "10-7-2019",
       Amount: "1",
