@@ -64,7 +64,8 @@ let api = [
           user_id: Number,
           packaged: String,
           sent: String,
-          delivered: String
+          delivered: String,
+          tShirtPreview: String
         }
       },
       response:{
@@ -85,9 +86,27 @@ let api = [
           user_id: Number,
           packaged: String,
           sent: String,
-          delivered: String
+          delivered: String,
+          tShirtPreview: String
           }
         ]
+      }
+    },
+    {
+      description: 'Update the status of the order',
+      request:{
+        method: 'put',
+        url: '/rest/orders/:id',
+        params: ['id'],
+        body:{
+          id: Number,
+          sent: String,
+          tShirtPreview: String
+        }
+      },
+      response:{
+        statusCode: Number,
+        error: Object
       }
     },
     {
@@ -125,6 +144,23 @@ let api = [
           image: String
           }
         ]
+      }
+    },
+    {
+      description: 'Update the design of t-shirt using previous designed',
+      request:{
+        method: 'put',
+        url: '/rest/order_row/:id',
+        params: ['id'],
+        body:{
+          id: Number,
+          text: String,
+          image: String
+        }
+      },
+      response:{
+        statusCode: Number,
+        error: Object
       }
     },
   ]
